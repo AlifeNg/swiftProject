@@ -127,7 +127,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             return 170
         }
         if indexPath.section == 1 {
-            return 150
+            return 145
         }
         if indexPath.section == 2 || indexPath.section == 3 {
             return 175
