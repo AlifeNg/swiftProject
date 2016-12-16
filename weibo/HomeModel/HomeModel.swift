@@ -11,7 +11,7 @@ import HandyJSON
 
 class HomeModel: HandyJSON {
     
-//    var code : String?;
+    var code : String?;
     var data : HomeDataModel?;
     
     required init() {}
