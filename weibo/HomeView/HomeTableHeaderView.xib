@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeTableHeaderView" customModule="weibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZT6-XB-uef">
+                    <rect key="frame" x="0.0" y="0.0" width="5" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="5" id="o1T-Jg-3wY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rF-YD-pGE">
+                    <rect key="frame" x="10" y="0.0" width="200" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="yWy-xn-OhW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZT6-XB-uef" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7hP-bU-Uid"/>
+                <constraint firstItem="1rF-YD-pGE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="J45-gS-u2L"/>
+                <constraint firstItem="ZT6-XB-uef" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TcP-Ev-T2Q"/>
+                <constraint firstAttribute="bottom" secondItem="ZT6-XB-uef" secondAttribute="bottom" id="ZD7-yA-SIN"/>
+                <constraint firstAttribute="bottom" secondItem="1rF-YD-pGE" secondAttribute="bottom" id="dfk-l9-gda"/>
+                <constraint firstItem="1rF-YD-pGE" firstAttribute="leading" secondItem="ZT6-XB-uef" secondAttribute="trailing" constant="5" id="wkS-lm-jr3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="colorLabel" destination="ZT6-XB-uef" id="258-h2-uFL"/>
+                <outlet property="titleLabel" destination="1rF-YD-pGE" id="wR1-TH-wms"/>
+            </connections>
+            <point key="canvasLocation" x="62" y="-57"/>
+        </view>
+    </objects>
+</document>
