@@ -38,14 +38,7 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let nib = UINib(nibName:"CategoryListCell",bundle:nil)
         self.table.register(nib, forCellReuseIdentifier: "CategoryListCell")
         
-        //MARK:下拉刷新
-//        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-//        self.table.dg_addPullToRefreshWithActionHandler({ 
-//            self.dataArray?.removeAll()
-//            self.initData()
-//        }, loadingView: loadingView)
-//        self.table.dg_setPullToRefreshFillColor(UIColor.orange)
-        
+        //MARK:下拉刷新上拉加载
         var header: ESRefreshProtocol & ESRefreshAnimatorProtocol
         var footer: ESRefreshProtocol & ESRefreshAnimatorProtocol
         
