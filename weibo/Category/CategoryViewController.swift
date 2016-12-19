@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import HandyJSON
+import ESPullToRefresh
 
 class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -26,6 +27,8 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func initView(){
         self.view.backgroundColor = UIColor.white
+        self.title = self.model?.name
+        self.dataArray = Array()
         self.automaticallyAdjustsScrollViewInsets = false
         self.table = UITableView.init(frame: CGRect(x:0,y:64,width:(self.view?.bounds.width)!,height:(self.view?.bounds.height)!-64), style: UITableViewStyle.plain)
         self.table.delegate = self;
@@ -34,10 +37,33 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         let nib = UINib(nibName:"CategoryListCell",bundle:nil)
         self.table.register(nib, forCellReuseIdentifier: "CategoryListCell")
+        
+        //MARK:下拉刷新
+//        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+//        self.table.dg_addPullToRefreshWithActionHandler({ 
+//            self.dataArray?.removeAll()
+//            self.initData()
+//        }, loadingView: loadingView)
+//        self.table.dg_setPullToRefreshFillColor(UIColor.orange)
+        
+        var header: ESRefreshProtocol & ESRefreshAnimatorProtocol
+        var footer: ESRefreshProtocol & ESRefreshAnimatorProtocol
+        
+        header = ESRefreshHeaderAnimator.init(frame: CGRect.zero)
+        footer = ESRefreshFooterAnimator.init(frame: CGRect.zero)
+        let _ = self.table.es_addPullToRefresh(animator: header){
+            [weak self] in
+            self?.offset = 0
+            self?.dataArray?.removeAll()
+            self?.initData()
+        }
+        
+        let _ = self.table.es_addInfiniteScrolling(animator: footer){
+             [weak self] in self?.loadMore()
+        }
     }
     
     func initData() {
-        self.dataArray = Array()
         let key : Dictionary = ["key" : "c0d28ec0954084b4426223366293d190","offset":String(offset),"category_id":(self.model?.id!)! as String,"limit":"20"]
         Alamofire.request("http://yiapi.xinli001.com/fm/category-jiemu-list.json", method: .get, parameters: key).responseJSON{
             response in
@@ -45,10 +71,18 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
             for info : CategorySubModel in (self.categoryModel?.data)!{
                 self.dataArray?.append(info)
             }
+            //MARK:停止刷新
+            self.table.es_stopPullToRefresh(completion: true)
+            self.table.es_stopLoadingMore()
             self.table.reloadData()
         }
     }
     
+    //MARK:load more
+    func loadMore() {
+        offset += 20
+        initData()
+    }
     
     //MARK:table delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

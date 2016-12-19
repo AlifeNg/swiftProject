@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ESPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HandyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,6 +32,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7E5DD5E7446D552B3C38D11384BD2ED1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
@@ -37,7 +47,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF75DAFE6369048699D8D0D4095BB25F</key>
+		<key>DEAA6EAFD88F608B99F06F35994C1300</key>
 		<dict>
 			<key>primary</key>
 			<true/>

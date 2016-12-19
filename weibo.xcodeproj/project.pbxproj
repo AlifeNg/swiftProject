@@ -19,6 +19,11 @@
 		0862488C1E078635007BBB2F /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862488A1E078635007BBB2F /* CategoryListCell.swift */; };
 		0862488D1E078635007BBB2F /* CategoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0862488B1E078635007BBB2F /* CategoryListCell.xib */; };
 		0862488F1E078CB4007BBB2F /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862488E1E078CB4007BBB2F /* CategoryModel.swift */; };
+		086248961E07AAC0007BBB2F /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086248911E07AAC0007BBB2F /* DGElasticPullToRefreshConstants.swift */; };
+		086248971E07AAC0007BBB2F /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086248921E07AAC0007BBB2F /* DGElasticPullToRefreshExtensions.swift */; };
+		086248981E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086248931E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingView.swift */; };
+		086248991E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086248941E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
+		0862489A1E07AAC0007BBB2F /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086248951E07AAC0007BBB2F /* DGElasticPullToRefreshView.swift */; };
 		08800D6D1E029F0B0084FE63 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08800D6C1E029F0B0084FE63 /* HomeModel.swift */; };
 		08800D6F1E029F980084FE63 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08800D6E1E029F980084FE63 /* HomeDataModel.swift */; };
 		08800D711E02A0940084FE63 /* HomeDataInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08800D701E02A0940084FE63 /* HomeDataInfoModel.swift */; };
@@ -67,6 +72,11 @@
 		0862488A1E078635007BBB2F /* CategoryListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListCell.swift; sourceTree = "<group>"; };
 		0862488B1E078635007BBB2F /* CategoryListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryListCell.xib; sourceTree = "<group>"; };
 		0862488E1E078CB4007BBB2F /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		086248911E07AAC0007BBB2F /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
+		086248921E07AAC0007BBB2F /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
+		086248931E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
+		086248941E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
+		086248951E07AAC0007BBB2F /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
 		08800D6C1E029F0B0084FE63 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		08800D6E1E029F980084FE63 /* HomeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
 		08800D701E02A0940084FE63 /* HomeDataInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataInfoModel.swift; sourceTree = "<group>"; };
@@ -145,6 +155,18 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		086248901E07AAC0007BBB2F /* DGElasticPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				086248911E07AAC0007BBB2F /* DGElasticPullToRefreshConstants.swift */,
+				086248921E07AAC0007BBB2F /* DGElasticPullToRefreshExtensions.swift */,
+				086248931E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingView.swift */,
+				086248941E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingViewCircle.swift */,
+				086248951E07AAC0007BBB2F /* DGElasticPullToRefreshView.swift */,
+			);
+			path = DGElasticPullToRefresh;
+			sourceTree = "<group>";
+		};
 		08800D6B1E029EBF0084FE63 /* HomeModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +180,7 @@
 		089743EA1E03843B0097B5E1 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				086248901E07AAC0007BBB2F /* DGElasticPullToRefresh */,
 				089743EB1E03843B0097B5E1 /* LTCycleView */,
 			);
 			path = ThirdParty;
@@ -444,6 +467,8 @@
 				089743F11E03843B0097B5E1 /* LTCellConfig.swift in Sources */,
 				086248891E0783F5007BBB2F /* CategoryViewController.swift in Sources */,
 				085199841E03D98E00D5FEF7 /* HomeTableFouthcell.swift in Sources */,
+				086248971E07AAC0007BBB2F /* DGElasticPullToRefreshExtensions.swift in Sources */,
+				0862489A1E07AAC0007BBB2F /* DGElasticPullToRefreshView.swift in Sources */,
 				0851997A1E038F4600D5FEF7 /* HomeTableFirstCell.swift in Sources */,
 				085199811E03D12B00D5FEF7 /* HomeTableThirdCell.swift in Sources */,
 				08D66CB11E029B670064332D /* AppDelegate.swift in Sources */,
@@ -453,9 +478,12 @@
 				085199761E038A2700D5FEF7 /* HomeTableHeaderView.swift in Sources */,
 				08800D6D1E029F0B0084FE63 /* HomeModel.swift in Sources */,
 				089743F21E03843B0097B5E1 /* LTCycleCell.swift in Sources */,
+				086248991E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
+				086248981E07AAC0007BBB2F /* DGElasticPullToRefreshLoadingView.swift in Sources */,
 				0862488F1E078CB4007BBB2F /* CategoryModel.swift in Sources */,
 				0851997D1E03C76300D5FEF7 /* HomeTableSecondCell.swift in Sources */,
 				089743F41E03843B0097B5E1 /* LTCycleView.swift in Sources */,
+				086248961E07AAC0007BBB2F /* DGElasticPullToRefreshConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
