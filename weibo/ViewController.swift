@@ -15,7 +15,7 @@ var respObj = HomeModel()
 var table = UITableView()
 var categoryArray = Array<Any>()
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,HomeTableFirstCellDelegete,HomeTableSecondCellDelegate,HomeTableThirdCellDelegate,HomeTableFouthcellDelegate {
     //MARK:轮播图
     var bannerView : LTCycleView = {
         let cellConfig = LTCellConfig()
@@ -35,6 +35,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cycleView
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //UI
@@ -44,6 +50,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     //MARK:UI
     func initView() {
+        self.automaticallyAdjustsScrollViewInsets = false
         table = UITableView(frame:self.view!.bounds,style: UITableViewStyle.grouped)
         table.delegate = self
         table.dataSource = self
@@ -99,11 +106,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         fouchCell.selectionStyle = UITableViewCellSelectionStyle.none
         if indexPath.section == 0 {
             firstCell.setMenuUIWithAry(ary: categoryArray)
+            firstCell.delegate = self
             return firstCell
         }
         if indexPath.section == 1 {
             if (respObj.data != nil) {
                 secondCell.setUIWithInfo(info: respObj.data!)
+                secondCell.delegate = self
             }
             return secondCell
         }
@@ -111,12 +120,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             if (respObj.data != nil) {
                 thirdCell.indexPath = indexPath
                 thirdCell.setUIWithModel(model: respObj.data!)
+                thirdCell.delegate = self
             }
             return thirdCell
         }
         if indexPath.section == 4 {
             if (respObj.data != nil){
                 fouchCell.setUIWithArray(model: respObj.data!)
+                fouchCell.delegate = self
             }
             return fouchCell
         }
@@ -159,5 +170,27 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             return 0.0001;
         }
         return 30
+    }
+    
+    //MARK:delegate
+    //MARK:分类delegate
+    func selectedSubMenuItem(index: NSInteger) {
+        print(index)
+    }
+    //MARK:热门推荐delegate
+    func selectedHotTJItemWithTag(tag: NSInteger) {
+        print(tag)
+    }
+    //MARK:最新心理课
+    func selectedNewLessonWithTag(tag: NSInteger) {
+        print(tag)
+    }
+    //MARK:最新FM
+    func selectedNewFMWithTag(tag: NSInteger) {
+        print(tag)
+    }
+    //MARK:电台推荐
+    func selectedFMItem(index: NSInteger) {
+        print(index)
     }
 }

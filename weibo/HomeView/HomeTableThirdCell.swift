@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol  HomeTableThirdCellDelegate : NSObjectProtocol{
+    func selectedNewLessonWithTag(tag:NSInteger)
+    func selectedNewFMWithTag(tag:NSInteger)
+}
+
 class HomeTableThirdCell: UITableViewCell {
+    
+    var delegate : HomeTableThirdCellDelegate?
+    
     
     var indexPath = IndexPath()
     
@@ -83,6 +91,18 @@ class HomeTableThirdCell: UITableViewCell {
                 img3.kf.setImage(with: url)
                 titleLab3.text = info?.title
                 speakLab3.text = info?.speak
+            }
+        }
+    }
+    @IBAction func selectBtn(_ sender: UIButton) {
+        if self.indexPath.section == 2 {
+            if delegate != nil {
+                delegate?.selectedNewLessonWithTag(tag: sender.tag - 100)
+            }
+        }
+        if self.indexPath.section == 3 {
+            if delegate != nil {
+                delegate?.selectedNewFMWithTag(tag: sender.tag - 100)
             }
         }
     }

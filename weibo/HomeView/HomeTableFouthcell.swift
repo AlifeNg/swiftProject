@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol HomeTableFouthcellDelegate : NSObjectProtocol{
+    func selectedFMItem(index:NSInteger)
+}
+
 class HomeTableFouthcell: UITableViewCell {
+    
+    var delegate : HomeTableFouthcellDelegate?
+    
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -51,7 +59,9 @@ class HomeTableFouthcell: UITableViewCell {
     
     
     func touchFM(_ sender:UIButton) {
-        print(sender.tag)
+        if delegate != nil {
+            delegate?.selectedFMItem(index: sender.tag - 500)
+        }
     }
     
     func setUIWithArray(model:HomeDataModel) {

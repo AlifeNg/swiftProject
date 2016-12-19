@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol HomeTableFirstCellDelegete : NSObjectProtocol {
+    func selectedSubMenuItem(index:NSInteger)
+}
+
 class HomeTableFirstCell: UITableViewCell {
     
     var contentView_Back = UIView()
@@ -16,6 +20,7 @@ class HomeTableFirstCell: UITableViewCell {
     var lab = UILabel()
     var buton = UIButton()
     
+    weak var delegate : HomeTableFirstCellDelegete?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -80,7 +85,9 @@ class HomeTableFirstCell: UITableViewCell {
     
     //button点击事件
     func selectedSubmenu(_ sender:UIButton){
-        print(sender.tag);
+        if delegate != nil {
+            delegate!.selectedSubMenuItem(index: sender.tag - 200)
+        }
     }
     //设置UI
     func setMenuUIWithAry(ary:Array<Any>){

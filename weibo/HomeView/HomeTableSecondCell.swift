@@ -8,8 +8,12 @@
 
 import UIKit
 
-class HomeTableSecondCell: UITableViewCell {
+protocol HomeTableSecondCellDelegate {
+    func selectedHotTJItemWithTag(tag:NSInteger)
+}
 
+class HomeTableSecondCell: UITableViewCell {
+    
     @IBOutlet weak var img1: UIImageView!
     
     @IBOutlet weak var img2: UIImageView!
@@ -21,6 +25,8 @@ class HomeTableSecondCell: UITableViewCell {
     @IBOutlet weak var title2: UILabel!
     
     @IBOutlet weak var title: UILabel!
+    
+    var delegate : HomeTableSecondCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -58,4 +64,10 @@ class HomeTableSecondCell: UITableViewCell {
         
     }
     
+    @IBAction func selectButton(_ sender: UIButton) {
+        if delegate != nil {
+            delegate?.selectedHotTJItemWithTag(tag: sender.tag - 100)
+        }
+        
+    }
 }

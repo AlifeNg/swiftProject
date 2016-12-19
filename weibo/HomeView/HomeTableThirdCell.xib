@@ -42,8 +42,15 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPZ-kJ-iur">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                <connections>
+                                    <action selector="selectBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Rgb-b0-p27"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vPZ-kJ-iur" secondAttribute="bottom" id="0TE-l0-eA1"/>
                             <constraint firstItem="hEf-Ma-Mtf" firstAttribute="top" secondItem="URW-N2-szE" secondAttribute="bottom" id="6Dt-WE-hnZ"/>
                             <constraint firstItem="1xP-Qo-d8P" firstAttribute="top" secondItem="LjU-SV-A0o" secondAttribute="top" id="79q-qy-zCu"/>
                             <constraint firstAttribute="height" constant="50" id="KtM-da-xC0"/>
@@ -51,9 +58,12 @@
                             <constraint firstItem="URW-N2-szE" firstAttribute="leading" secondItem="1xP-Qo-d8P" secondAttribute="trailing" constant="10" id="QdY-Xh-2z7"/>
                             <constraint firstItem="hEf-Ma-Mtf" firstAttribute="leading" secondItem="1xP-Qo-d8P" secondAttribute="trailing" constant="10" id="U7D-kW-yRc"/>
                             <constraint firstAttribute="trailing" secondItem="URW-N2-szE" secondAttribute="trailing" id="XzJ-99-Pi4"/>
+                            <constraint firstItem="vPZ-kJ-iur" firstAttribute="leading" secondItem="LjU-SV-A0o" secondAttribute="leading" id="cia-OL-SYd"/>
+                            <constraint firstItem="vPZ-kJ-iur" firstAttribute="top" secondItem="LjU-SV-A0o" secondAttribute="top" id="dkz-c6-wJb"/>
                             <constraint firstItem="URW-N2-szE" firstAttribute="top" secondItem="LjU-SV-A0o" secondAttribute="top" id="ezu-BC-gPJ"/>
                             <constraint firstAttribute="bottom" secondItem="1xP-Qo-d8P" secondAttribute="bottom" id="sjm-gj-1QA"/>
                             <constraint firstItem="1xP-Qo-d8P" firstAttribute="leading" secondItem="LjU-SV-A0o" secondAttribute="leading" id="v2F-gS-S1f"/>
+                            <constraint firstAttribute="trailing" secondItem="vPZ-kJ-iur" secondAttribute="trailing" id="xKA-c3-Gqa"/>
                             <constraint firstAttribute="bottom" secondItem="hEf-Ma-Mtf" secondAttribute="bottom" id="yp4-aa-n7s"/>
                         </constraints>
                     </view>
@@ -81,17 +91,27 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tn-4Y-jic">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                <connections>
+                                    <action selector="selectBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="B3H-ed-DTB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="xTq-qW-zps" firstAttribute="leading" secondItem="FhU-qT-vbM" secondAttribute="trailing" constant="10" id="3R6-0a-bW6"/>
                             <constraint firstAttribute="bottom" secondItem="Lhw-O1-Wc8" secondAttribute="bottom" id="5so-OX-rpP"/>
+                            <constraint firstAttribute="bottom" secondItem="9Tn-4Y-jic" secondAttribute="bottom" id="7JF-Q0-S2M"/>
+                            <constraint firstAttribute="trailing" secondItem="9Tn-4Y-jic" secondAttribute="trailing" id="8UC-q7-laU"/>
                             <constraint firstItem="FhU-qT-vbM" firstAttribute="top" secondItem="JS1-HV-upN" secondAttribute="top" id="LXa-gV-nQl"/>
                             <constraint firstItem="FhU-qT-vbM" firstAttribute="leading" secondItem="JS1-HV-upN" secondAttribute="leading" id="NJV-TC-d3A"/>
                             <constraint firstAttribute="trailing" secondItem="xTq-qW-zps" secondAttribute="trailing" id="anl-TE-Yb0"/>
+                            <constraint firstItem="9Tn-4Y-jic" firstAttribute="leading" secondItem="JS1-HV-upN" secondAttribute="leading" id="d59-8w-Knv"/>
                             <constraint firstAttribute="trailing" secondItem="Lhw-O1-Wc8" secondAttribute="trailing" id="efG-eV-7mO"/>
                             <constraint firstItem="Lhw-O1-Wc8" firstAttribute="top" secondItem="xTq-qW-zps" secondAttribute="bottom" id="iMw-to-jOs"/>
                             <constraint firstItem="xTq-qW-zps" firstAttribute="top" secondItem="JS1-HV-upN" secondAttribute="top" id="o44-UA-qmZ"/>
                             <constraint firstItem="Lhw-O1-Wc8" firstAttribute="leading" secondItem="FhU-qT-vbM" secondAttribute="trailing" constant="10" id="qcW-2i-PCc"/>
+                            <constraint firstItem="9Tn-4Y-jic" firstAttribute="top" secondItem="JS1-HV-upN" secondAttribute="top" id="saN-mj-Uz9"/>
                             <constraint firstAttribute="bottom" secondItem="FhU-qT-vbM" secondAttribute="bottom" id="w8H-Ov-knk"/>
                         </constraints>
                     </view>
@@ -119,8 +139,17 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1x6-2Y-9Qv">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                <connections>
+                                    <action selector="selectBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZZD-gJ-I4e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="1x6-2Y-9Qv" firstAttribute="leading" secondItem="IW8-xV-4iz" secondAttribute="leading" id="5qt-OE-1Yo"/>
+                            <constraint firstAttribute="trailing" secondItem="1x6-2Y-9Qv" secondAttribute="trailing" id="6h3-DI-yEc"/>
+                            <constraint firstAttribute="bottom" secondItem="1x6-2Y-9Qv" secondAttribute="bottom" id="7LO-ef-eBv"/>
                             <constraint firstItem="Jgr-Up-9l3" firstAttribute="leading" secondItem="0gs-nT-UY1" secondAttribute="trailing" constant="10" id="AJH-n3-iOV"/>
                             <constraint firstAttribute="bottom" secondItem="Jgr-Up-9l3" secondAttribute="bottom" id="OWW-VS-m3e"/>
                             <constraint firstItem="Jgr-Up-9l3" firstAttribute="top" secondItem="6FU-tg-TlL" secondAttribute="bottom" id="X42-mr-Kdh"/>
@@ -130,6 +159,7 @@
                             <constraint firstItem="6FU-tg-TlL" firstAttribute="top" secondItem="IW8-xV-4iz" secondAttribute="top" id="oTG-Rz-uNC"/>
                             <constraint firstAttribute="trailing" secondItem="6FU-tg-TlL" secondAttribute="trailing" id="q6r-gJ-l6y"/>
                             <constraint firstItem="0gs-nT-UY1" firstAttribute="leading" secondItem="IW8-xV-4iz" secondAttribute="leading" id="qwa-Dw-xjI"/>
+                            <constraint firstItem="1x6-2Y-9Qv" firstAttribute="top" secondItem="IW8-xV-4iz" secondAttribute="top" id="uJY-1t-2b5"/>
                             <constraint firstItem="0gs-nT-UY1" firstAttribute="top" secondItem="IW8-xV-4iz" secondAttribute="top" id="ywU-qe-zkB"/>
                         </constraints>
                     </view>
@@ -159,7 +189,7 @@
                 <outlet property="titleLab2" destination="xTq-qW-zps" id="L40-RG-rMj"/>
                 <outlet property="titleLab3" destination="6FU-tg-TlL" id="yl0-00-5UN"/>
             </connections>
-            <point key="canvasLocation" x="-192" y="110"/>
+            <point key="canvasLocation" x="-192" y="109.5"/>
         </tableViewCell>
     </objects>
 </document>
