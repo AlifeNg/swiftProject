@@ -91,8 +91,8 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
         if (self.dataArray?.count)! > 0 {
             let info : CategorySubModel = self.dataArray![indexPath.row]
             cell.titleLabel.text = (info.title)!
-            cell.speakLabel.text = (info.speak)!
-            cell.listenNumber.text = (info.viewnum)!
+            cell.speakLabel.text = String(format:"主播:%@",(info.speak)!)
+            cell.listenNumber.text = String(format:"收听量:%@",(info.viewnum)!)
             let url = URL(string:(info.cover)!)
             cell.icon.kf.setImage(with: url)
         }
