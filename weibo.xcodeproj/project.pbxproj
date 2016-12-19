@@ -15,6 +15,10 @@
 		085199811E03D12B00D5FEF7 /* HomeTableThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851997F1E03D12B00D5FEF7 /* HomeTableThirdCell.swift */; };
 		085199821E03D12B00D5FEF7 /* HomeTableThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085199801E03D12B00D5FEF7 /* HomeTableThirdCell.xib */; };
 		085199841E03D98E00D5FEF7 /* HomeTableFouthcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085199831E03D98E00D5FEF7 /* HomeTableFouthcell.swift */; };
+		086248891E0783F5007BBB2F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086248881E0783F5007BBB2F /* CategoryViewController.swift */; };
+		0862488C1E078635007BBB2F /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862488A1E078635007BBB2F /* CategoryListCell.swift */; };
+		0862488D1E078635007BBB2F /* CategoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0862488B1E078635007BBB2F /* CategoryListCell.xib */; };
+		0862488F1E078CB4007BBB2F /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862488E1E078CB4007BBB2F /* CategoryModel.swift */; };
 		08800D6D1E029F0B0084FE63 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08800D6C1E029F0B0084FE63 /* HomeModel.swift */; };
 		08800D6F1E029F980084FE63 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08800D6E1E029F980084FE63 /* HomeDataModel.swift */; };
 		08800D711E02A0940084FE63 /* HomeDataInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08800D701E02A0940084FE63 /* HomeDataInfoModel.swift */; };
@@ -59,6 +63,10 @@
 		0851997F1E03D12B00D5FEF7 /* HomeTableThirdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableThirdCell.swift; sourceTree = "<group>"; };
 		085199801E03D12B00D5FEF7 /* HomeTableThirdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableThirdCell.xib; sourceTree = "<group>"; };
 		085199831E03D98E00D5FEF7 /* HomeTableFouthcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableFouthcell.swift; sourceTree = "<group>"; };
+		086248881E0783F5007BBB2F /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		0862488A1E078635007BBB2F /* CategoryListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListCell.swift; sourceTree = "<group>"; };
+		0862488B1E078635007BBB2F /* CategoryListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryListCell.xib; sourceTree = "<group>"; };
+		0862488E1E078CB4007BBB2F /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		08800D6C1E029F0B0084FE63 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		08800D6E1E029F980084FE63 /* HomeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
 		08800D701E02A0940084FE63 /* HomeDataInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataInfoModel.swift; sourceTree = "<group>"; };
@@ -126,6 +134,17 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		086248871E0783E2007BBB2F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				086248881E0783F5007BBB2F /* CategoryViewController.swift */,
+				0862488A1E078635007BBB2F /* CategoryListCell.swift */,
+				0862488B1E078635007BBB2F /* CategoryListCell.xib */,
+				0862488E1E078CB4007BBB2F /* CategoryModel.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		08800D6B1E029EBF0084FE63 /* HomeModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +203,7 @@
 				089743EA1E03843B0097B5E1 /* ThirdParty */,
 				08800D6B1E029EBF0084FE63 /* HomeModel */,
 				085199741E038A1200D5FEF7 /* HomeView */,
+				086248871E0783E2007BBB2F /* Category */,
 				08D66CB01E029B670064332D /* AppDelegate.swift */,
 				08D66CB21E029B670064332D /* ViewController.swift */,
 				08D66CB41E029B670064332D /* Main.storyboard */,
@@ -341,6 +361,7 @@
 			files = (
 				089743F31E03843B0097B5E1 /* LTCycleCell.xib in Resources */,
 				08D66CBB1E029B670064332D /* LaunchScreen.storyboard in Resources */,
+				0862488D1E078635007BBB2F /* CategoryListCell.xib in Resources */,
 				08D66CB81E029B670064332D /* Assets.xcassets in Resources */,
 				085199821E03D12B00D5FEF7 /* HomeTableThirdCell.xib in Resources */,
 				08D66CB61E029B670064332D /* Main.storyboard in Resources */,
@@ -421,15 +442,18 @@
 			files = (
 				08D66CB31E029B670064332D /* ViewController.swift in Sources */,
 				089743F11E03843B0097B5E1 /* LTCellConfig.swift in Sources */,
+				086248891E0783F5007BBB2F /* CategoryViewController.swift in Sources */,
 				085199841E03D98E00D5FEF7 /* HomeTableFouthcell.swift in Sources */,
 				0851997A1E038F4600D5FEF7 /* HomeTableFirstCell.swift in Sources */,
 				085199811E03D12B00D5FEF7 /* HomeTableThirdCell.swift in Sources */,
 				08D66CB11E029B670064332D /* AppDelegate.swift in Sources */,
 				08800D6F1E029F980084FE63 /* HomeDataModel.swift in Sources */,
 				08800D711E02A0940084FE63 /* HomeDataInfoModel.swift in Sources */,
+				0862488C1E078635007BBB2F /* CategoryListCell.swift in Sources */,
 				085199761E038A2700D5FEF7 /* HomeTableHeaderView.swift in Sources */,
 				08800D6D1E029F0B0084FE63 /* HomeModel.swift in Sources */,
 				089743F21E03843B0097B5E1 /* LTCycleCell.swift in Sources */,
+				0862488F1E078CB4007BBB2F /* CategoryModel.swift in Sources */,
 				0851997D1E03C76300D5FEF7 /* HomeTableSecondCell.swift in Sources */,
 				089743F41E03843B0097B5E1 /* LTCycleView.swift in Sources */,
 			);

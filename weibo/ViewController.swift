@@ -40,6 +40,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.isNavigationBarHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -176,6 +180,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     //MARK:分类delegate
     func selectedSubMenuItem(index: NSInteger) {
         print(index)
+        let catagoryViewController = CategoryViewController()
+        catagoryViewController.model = respObj.data?.category?[index]
+        self.navigationController?.pushViewController(catagoryViewController, animated: true)
     }
     //MARK:热门推荐delegate
     func selectedHotTJItemWithTag(tag: NSInteger) {
