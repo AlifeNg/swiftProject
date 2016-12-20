@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		083154C11E07BDF500CA4352 /* FMPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083154C01E07BDF500CA4352 /* FMPlayerViewController.swift */; };
+		083154D61E07CFB800CA4352 /* FMPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083154D41E07CFB800CA4352 /* FMPlayerViewController.swift */; };
+		083154D71E07CFB800CA4352 /* FMPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083154D51E07CFB800CA4352 /* FMPlayerViewController.xib */; };
+		083154DE1E07D29100CA4352 /* last.png in Resources */ = {isa = PBXBuildFile; fileRef = 083154D91E07D29100CA4352 /* last.png */; };
+		083154DF1E07D29100CA4352 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 083154DA1E07D29100CA4352 /* next.png */; };
+		083154E01E07D29100CA4352 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 083154DB1E07D29100CA4352 /* pause.png */; };
+		083154E11E07D29100CA4352 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 083154DC1E07D29100CA4352 /* play.png */; };
+		083154E21E07D29100CA4352 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 083154DD1E07D29100CA4352 /* stop.png */; };
 		085199761E038A2700D5FEF7 /* HomeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085199751E038A2700D5FEF7 /* HomeTableHeaderView.swift */; };
 		085199781E038A3F00D5FEF7 /* HomeTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085199771E038A3F00D5FEF7 /* HomeTableHeaderView.xib */; };
 		0851997A1E038F4600D5FEF7 /* HomeTableFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085199791E038F4600D5FEF7 /* HomeTableFirstCell.swift */; };
@@ -56,7 +62,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		083154C01E07BDF500CA4352 /* FMPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMPlayerViewController.swift; sourceTree = "<group>"; };
+		083154D41E07CFB800CA4352 /* FMPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMPlayerViewController.swift; sourceTree = "<group>"; };
+		083154D51E07CFB800CA4352 /* FMPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMPlayerViewController.xib; sourceTree = "<group>"; };
+		083154D91E07D29100CA4352 /* last.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = last.png; sourceTree = "<group>"; };
+		083154DA1E07D29100CA4352 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		083154DB1E07D29100CA4352 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		083154DC1E07D29100CA4352 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		083154DD1E07D29100CA4352 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		085199751E038A2700D5FEF7 /* HomeTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableHeaderView.swift; sourceTree = "<group>"; };
 		085199771E038A3F00D5FEF7 /* HomeTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableHeaderView.xib; sourceTree = "<group>"; };
 		085199791E038F4600D5FEF7 /* HomeTableFirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableFirstCell.swift; sourceTree = "<group>"; };
@@ -124,9 +136,22 @@
 		083154BF1E07BDDF00CA4352 /* FMPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				083154C01E07BDF500CA4352 /* FMPlayerViewController.swift */,
+				083154D41E07CFB800CA4352 /* FMPlayerViewController.swift */,
+				083154D51E07CFB800CA4352 /* FMPlayerViewController.xib */,
 			);
 			path = FMPlayer;
+			sourceTree = "<group>";
+		};
+		083154D81E07D29100CA4352 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				083154D91E07D29100CA4352 /* last.png */,
+				083154DA1E07D29100CA4352 /* next.png */,
+				083154DB1E07D29100CA4352 /* pause.png */,
+				083154DC1E07D29100CA4352 /* play.png */,
+				083154DD1E07D29100CA4352 /* stop.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		085199741E038A1200D5FEF7 /* HomeView */ = {
@@ -210,6 +235,7 @@
 		08D66CAF1E029B670064332D /* weibo */ = {
 			isa = PBXGroup;
 			children = (
+				083154D81E07D29100CA4352 /* Resource */,
 				089743EA1E03843B0097B5E1 /* ThirdParty */,
 				08800D6B1E029EBF0084FE63 /* HomeModel */,
 				085199741E038A1200D5FEF7 /* HomeView */,
@@ -331,6 +357,7 @@
 				TargetAttributes = {
 					08D66CAC1E029B670064332D = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					08D66CC01E029B670064332D = {
@@ -371,13 +398,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				089743F31E03843B0097B5E1 /* LTCycleCell.xib in Resources */,
+				083154E01E07D29100CA4352 /* pause.png in Resources */,
 				08D66CBB1E029B670064332D /* LaunchScreen.storyboard in Resources */,
+				083154DF1E07D29100CA4352 /* next.png in Resources */,
 				0862488D1E078635007BBB2F /* CategoryListCell.xib in Resources */,
 				08D66CB81E029B670064332D /* Assets.xcassets in Resources */,
+				083154DE1E07D29100CA4352 /* last.png in Resources */,
+				083154E11E07D29100CA4352 /* play.png in Resources */,
 				085199821E03D12B00D5FEF7 /* HomeTableThirdCell.xib in Resources */,
 				08D66CB61E029B670064332D /* Main.storyboard in Resources */,
 				089743F51E03843B0097B5E1 /* LTCycleView.xib in Resources */,
+				083154E21E07D29100CA4352 /* stop.png in Resources */,
 				085199781E038A3F00D5FEF7 /* HomeTableHeaderView.xib in Resources */,
+				083154D71E07CFB800CA4352 /* FMPlayerViewController.xib in Resources */,
 				0851997E1E03C76300D5FEF7 /* HomeTableSecondCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,9 +486,9 @@
 			files = (
 				08D66CB31E029B670064332D /* ViewController.swift in Sources */,
 				089743F11E03843B0097B5E1 /* LTCellConfig.swift in Sources */,
-				083154C11E07BDF500CA4352 /* FMPlayerViewController.swift in Sources */,
 				086248891E0783F5007BBB2F /* CategoryViewController.swift in Sources */,
 				085199841E03D98E00D5FEF7 /* HomeTableFouthcell.swift in Sources */,
+				083154D61E07CFB800CA4352 /* FMPlayerViewController.swift in Sources */,
 				0851997A1E038F4600D5FEF7 /* HomeTableFirstCell.swift in Sources */,
 				085199811E03D12B00D5FEF7 /* HomeTableThirdCell.swift in Sources */,
 				08D66CB11E029B670064332D /* AppDelegate.swift in Sources */,
@@ -620,10 +653,14 @@
 			baseConfigurationReference = 66F35F4BA797284C90DCC5AF /* Pods-weibo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = weibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Alife.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -633,10 +670,13 @@
 			baseConfigurationReference = 48329C63FE963D561021CD6B /* Pods-weibo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = weibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Alife.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

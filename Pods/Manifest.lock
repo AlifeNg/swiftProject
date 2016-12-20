@@ -2,20 +2,23 @@ PODS:
   - Alamofire (4.2.0)
   - ESPullToRefresh (2.2)
   - HandyJSON (1.4.0)
+  - Jukebox (0.2.1)
   - Kingfisher (3.2.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.2.0)
   - ESPullToRefresh (~> 2.2)
   - HandyJSON (~> 1.4.0)
+  - Jukebox (~> 0.2.1)
   - Kingfisher (~> 3.2.2)
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   ESPullToRefresh: 67aaf0c5cfc6c3b0396c3d4fa039078c878725d0
   HandyJSON: 8aa98b0ece8c5f7a9042bccd33b0254448704bcb
+  Jukebox: 81db618ccd3a1cc9b154f4ae0f5c4b54638666dd
   Kingfisher: 821466474ad7ffc375a4aecadfa05068cfed67b3
 
-PODFILE CHECKSUM: 06133be2284332fd8f6ca495f94822a5581f8928
+PODFILE CHECKSUM: 135e85006e657983a86dce1cca640a04eb8fc838
 
 COCOAPODS: 1.1.1

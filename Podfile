@@ -5,4 +5,5 @@ pod 'Alamofire','~>4.2.0'
 pod 'Kingfisher','~>3.2.2'
 pod 'HandyJSON','~>1.4.0'
 pod 'ESPullToRefresh','~>2.2'
+pod 'Jukebox','~>0.2.1'
 end

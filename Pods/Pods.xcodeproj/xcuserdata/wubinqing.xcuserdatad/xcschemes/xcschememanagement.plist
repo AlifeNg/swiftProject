@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Jukebox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7E5DD5E7446D552B3C38D11384BD2ED1</key>
+		<key>0A521FD5A46DDD3CBBB218DE11ECB37E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4BAB350EB25DD5C55700003655C9C9C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

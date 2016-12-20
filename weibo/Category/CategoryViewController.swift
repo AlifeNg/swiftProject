@@ -11,6 +11,7 @@ import Alamofire
 import HandyJSON
 import ESPullToRefresh
 
+
 class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var table = UITableView()
@@ -101,6 +102,13 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let info : CategorySubModel = self.dataArray![indexPath.row]
+        let fmVc = FMPlayerViewController()
+        fmVc.url = (info.url)!
+        self.navigationController?.pushViewController(fmVc, animated: true)
     }
     
 }
