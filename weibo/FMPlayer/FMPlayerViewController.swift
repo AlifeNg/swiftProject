@@ -14,6 +14,13 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
     
     var url : String?
     
+    var FMTitle : String?
+    
+    var FMNumber : String?
+    
+    var FMBgImage : String?
+    
+    
     @IBOutlet weak var bgImage: UIImageView!
 
     @IBOutlet weak var lastBtn: UIButton!
@@ -41,16 +48,26 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
         }else{
             jukebox = Jukebox(delegate: self, items: [JukeboxItem(URL: URL(string: self.url!)!)])!
         }
+        self.titleName.text = self.FMTitle
+        self.listenNum.text = String(format:"收听:%@",self.FMNumber!)
+        let bgImageUrl = URL(string:(self.FMBgImage)!)
+        self.bgImage.kf.setImage(with:bgImageUrl)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         jukebox.play()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        jukebox.stop()
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     override var prefersStatusBarHidden : Bool {
@@ -59,7 +76,6 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
     
     
     // MARK:- Helpers -
-    
     func populateLabelWithTime(_ label : UILabel, time: Double) {
         let minutes = Int(time / 60)
         let seconds = Int(time) - minutes * 60
@@ -169,5 +185,8 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
         }
     }
 
+    @IBAction func backLastController(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
 }

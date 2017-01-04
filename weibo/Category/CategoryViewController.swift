@@ -108,6 +108,9 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let info : CategorySubModel = self.dataArray![indexPath.row]
         let fmVc = FMPlayerViewController()
         fmVc.url = (info.url)!
+        fmVc.FMBgImage = info.cover
+        fmVc.FMTitle = info.title
+        fmVc.FMNumber = info.viewnum
         self.navigationController?.pushViewController(fmVc, animated: true)
     }
     

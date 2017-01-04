@@ -186,15 +186,33 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     //MARK:热门推荐delegate
     func selectedHotTJItemWithTag(tag: NSInteger) {
-        print(tag)
+        let fmVc = FMPlayerViewController()
+        let detailInfo = respObj.data?.hotfm?[tag]
+        fmVc.url = (detailInfo?.url)!
+        fmVc.FMBgImage = detailInfo?.background
+        fmVc.FMTitle = detailInfo?.title
+        fmVc.FMNumber = detailInfo?.viewnum
+        self.navigationController?.pushViewController(fmVc, animated: true)
     }
     //MARK:最新心理课
     func selectedNewLessonWithTag(tag: NSInteger) {
-        print(tag)
+        let fmVc = FMPlayerViewController()
+        let detailInfo = respObj.data?.newlesson?[tag]
+        fmVc.url = (detailInfo?.url)!
+        fmVc.FMBgImage = detailInfo?.cover
+        fmVc.FMTitle = detailInfo?.title
+        fmVc.FMNumber = detailInfo?.viewnum
+        self.navigationController?.pushViewController(fmVc, animated: true)
     }
     //MARK:最新FM
     func selectedNewFMWithTag(tag: NSInteger) {
-        print(tag)
+        let fmVc = FMPlayerViewController()
+        let detailInfo = respObj.data?.newfm?[tag]
+        fmVc.url = (detailInfo?.url)!
+        fmVc.FMBgImage = detailInfo?.cover
+        fmVc.FMTitle = detailInfo?.title
+        fmVc.FMNumber = detailInfo?.viewnum
+        self.navigationController?.pushViewController(fmVc, animated: true)
     }
     //MARK:电台推荐
     func selectedFMItem(index: NSInteger) {

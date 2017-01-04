@@ -41,6 +41,7 @@
 		08D66CBB1E029B670064332D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D66CB91E029B670064332D /* LaunchScreen.storyboard */; };
 		08D66CC61E029B670064332D /* weiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D66CC51E029B670064332D /* weiboTests.swift */; };
 		08D66CD11E029B670064332D /* weiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D66CD01E029B670064332D /* weiboUITests.swift */; };
+		08FA6EB31E1C976A00049CE4 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 08FA6EB21E1C976A00049CE4 /* back.png */; };
 		E1D12F69E4816D202C5550F9 /* Pods_weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51E8428D92C790ED01F5829 /* Pods_weibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		08D66CCC1E029B670064332D /* weiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D66CD01E029B670064332D /* weiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weiboUITests.swift; sourceTree = "<group>"; };
 		08D66CD21E029B670064332D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08FA6EB21E1C976A00049CE4 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		48329C63FE963D561021CD6B /* Pods-weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.release.xcconfig"; sourceTree = "<group>"; };
 		66F35F4BA797284C90DCC5AF /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
 		E51E8428D92C790ED01F5829 /* Pods_weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 		083154D81E07D29100CA4352 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				08FA6EB21E1C976A00049CE4 /* back.png */,
 				083154D91E07D29100CA4352 /* last.png */,
 				083154DA1E07D29100CA4352 /* next.png */,
 				083154DB1E07D29100CA4352 /* pause.png */,
@@ -409,6 +412,7 @@
 				08D66CB61E029B670064332D /* Main.storyboard in Resources */,
 				089743F51E03843B0097B5E1 /* LTCycleView.xib in Resources */,
 				083154E21E07D29100CA4352 /* stop.png in Resources */,
+				08FA6EB31E1C976A00049CE4 /* back.png in Resources */,
 				085199781E038A3F00D5FEF7 /* HomeTableHeaderView.xib in Resources */,
 				083154D71E07CFB800CA4352 /* FMPlayerViewController.xib in Resources */,
 				0851997E1E03C76300D5FEF7 /* HomeTableSecondCell.xib in Resources */,
