@@ -43,11 +43,11 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (jukebox != nil){
-            jukebox.stop()
-        }else{
-            jukebox = Jukebox(delegate: self, items: [JukeboxItem(URL: URL(string: self.url!)!)])!
-        }
+//        if (jukebox != nil){
+//            jukebox.stop()
+//        }else{
+//            jukebox = Jukebox(delegate: self, items: [JukeboxItem(URL: URL(string: self.url!)!)])!
+//        }
         self.titleName.text = self.FMTitle
         self.listenNum.text = String(format:"收听:%@",self.FMNumber!)
         let bgImageUrl = URL(string:(self.FMBgImage)!)
@@ -61,12 +61,12 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        jukebox.play()
+//        jukebox.play()
+        FMPlayer.shareInstance.play(url: self.url!, delegate: self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        jukebox.stop()
         self.navigationController?.isNavigationBarHidden = false
     }
     
@@ -115,7 +115,7 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
             playBtn.setImage(UIImage(named: "pause"), for: UIControlState())
         } else {
             let imageName: String
-            switch jukebox.state {
+            switch FMPlayer.shareInstance.jukebox.state {
             case .playing, .loading:
                 imageName = "pause"
             case .paused, .failed, .ready:
@@ -123,7 +123,7 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
             }
             playBtn.setImage(UIImage(named: imageName), for: UIControlState())
         }
-        print("Jukebox state changed to \(jukebox.state)")
+        print("Jukebox state changed to \(FMPlayer.shareInstance.jukebox.state)")
     }
     
     func jukeboxDidUpdateMetadata(_ jukebox: Jukebox, forItem: JukeboxItem) {
@@ -134,18 +134,18 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
         if event?.type == .remoteControl {
             switch event!.subtype {
             case .remoteControlPlay :
-                jukebox.play()
+                FMPlayer.shareInstance.play(url: self.url!, delegate: self)
             case .remoteControlPause :
-                jukebox.pause()
+                FMPlayer.shareInstance.pause()
             case .remoteControlNextTrack :
-                jukebox.playNext()
+                FMPlayer.shareInstance.playNext()
             case .remoteControlPreviousTrack:
-                jukebox.playPrevious()
+                FMPlayer.shareInstance.playPrevious()
             case .remoteControlTogglePlayPause:
-                if jukebox.state == .playing {
-                    jukebox.pause()
+                if FMPlayer.shareInstance.jukebox.state == .playing {
+                    FMPlayer.shareInstance.pause()
                 } else {
-                    jukebox.play()
+                    FMPlayer.shareInstance.play(url: self.url!, delegate: self)
                 }
             default:
                 break
@@ -154,34 +154,34 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
     }
     
     @IBAction func sliderChange(_ sender: UISlider) {
-        if let duration = jukebox.currentItem?.meta.duration {
-            jukebox.seek(toSecond: Int(Double(slider.value) * duration))
+        if let duration = FMPlayer.shareInstance.jukebox.currentItem?.meta.duration {
+            FMPlayer.shareInstance.jukebox.seek(toSecond: Int(Double(slider.value) * duration))
         }
     }
     
     @IBAction func prevAction(_ sender: UIButton) {
-        if let time = jukebox.currentItem?.currentTime, time > 5.0 || jukebox.playIndex == 0 {
-            jukebox.replayCurrentItem()
+        if let time = FMPlayer.shareInstance.jukebox.currentItem?.currentTime, time > 5.0 || FMPlayer.shareInstance.jukebox.playIndex == 0 {
+            FMPlayer.shareInstance.jukebox.replayCurrentItem()
         } else {
-            jukebox.playPrevious()
+            FMPlayer.shareInstance.jukebox.playPrevious()
         }
     }
     
     
     @IBAction func nextAction(_ sender: UIButton) {
-        jukebox.playNext()
+        FMPlayer.shareInstance.jukebox.playNext()
     }
     
     @IBAction func playPauseAction(_ sender: UIButton) {
-        switch jukebox.state {
+        switch FMPlayer.shareInstance.jukebox.state {
         case .ready :
-            jukebox.play(atIndex: 0)
+            FMPlayer.shareInstance.jukebox.play(atIndex: 0)
         case .playing :
-            jukebox.pause()
+            FMPlayer.shareInstance.jukebox.pause()
         case .paused :
-            jukebox.play()
+            FMPlayer.shareInstance.jukebox.play()
         default:
-            jukebox.stop()
+            FMPlayer.shareInstance.jukebox.stop()
         }
     }
 
