@@ -42,6 +42,7 @@
 		08D66CC61E029B670064332D /* weiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D66CC51E029B670064332D /* weiboTests.swift */; };
 		08D66CD11E029B670064332D /* weiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D66CD01E029B670064332D /* weiboUITests.swift */; };
 		08FA6EB31E1C976A00049CE4 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 08FA6EB21E1C976A00049CE4 /* back.png */; };
+		0B96C7E21E1DF6450021A7E8 /* FMPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96C7E11E1DF6450021A7E8 /* FMPlayer.swift */; };
 		E1D12F69E4816D202C5550F9 /* Pods_weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51E8428D92C790ED01F5829 /* Pods_weibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		08D66CD01E029B670064332D /* weiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weiboUITests.swift; sourceTree = "<group>"; };
 		08D66CD21E029B670064332D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FA6EB21E1C976A00049CE4 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		0B96C7E11E1DF6450021A7E8 /* FMPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMPlayer.swift; sourceTree = "<group>"; };
 		48329C63FE963D561021CD6B /* Pods-weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.release.xcconfig"; sourceTree = "<group>"; };
 		66F35F4BA797284C90DCC5AF /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
 		E51E8428D92C790ED01F5829 /* Pods_weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 			children = (
 				083154D41E07CFB800CA4352 /* FMPlayerViewController.swift */,
 				083154D51E07CFB800CA4352 /* FMPlayerViewController.xib */,
+				0B96C7E11E1DF6450021A7E8 /* FMPlayer.swift */,
 			);
 			path = FMPlayer;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				08800D6F1E029F980084FE63 /* HomeDataModel.swift in Sources */,
 				08800D711E02A0940084FE63 /* HomeDataInfoModel.swift in Sources */,
 				0862488C1E078635007BBB2F /* CategoryListCell.swift in Sources */,
+				0B96C7E21E1DF6450021A7E8 /* FMPlayer.swift in Sources */,
 				085199761E038A2700D5FEF7 /* HomeTableHeaderView.swift in Sources */,
 				08800D6D1E029F0B0084FE63 /* HomeModel.swift in Sources */,
 				089743F21E03843B0097B5E1 /* LTCycleCell.swift in Sources */,
