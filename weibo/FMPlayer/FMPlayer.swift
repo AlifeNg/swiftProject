@@ -24,6 +24,7 @@ class FMPlayer: NSObject{
     func play(url:String, delegate: FMPlayerViewController) {
         if jukebox != nil &&  url == playUrl{
             jukebox.play()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "SeekSlider"), object: self, userInfo: ["duration":(jukebox.currentItem?.meta.duration!)! as Double,"currentTime":(jukebox.currentItem?.currentTime!)! as Double])
         }else{
             if jukebox != nil {
                 jukebox.stop()

@@ -43,15 +43,13 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if (jukebox != nil){
-//            jukebox.stop()
-//        }else{
-//            jukebox = Jukebox(delegate: self, items: [JukeboxItem(URL: URL(string: self.url!)!)])!
-//        }
         self.titleName.text = self.FMTitle
         self.listenNum.text = String(format:"收听:%@",self.FMNumber!)
         let bgImageUrl = URL(string:(self.FMBgImage)!)
         self.bgImage.kf.setImage(with:bgImageUrl)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(seekSlider), name:NSNotification.Name(rawValue: "SeekSlider"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,7 +94,9 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
     
     func jukeboxPlaybackProgressDidChange(_ jukebox: Jukebox) {
         
-        if let currentTime = jukebox.currentItem?.currentTime, let duration = jukebox.currentItem?.meta.duration {
+        if let currentTime = jukebox.currentItem?.currentTime,
+           let duration = jukebox.currentItem?.meta.duration
+        {
             let value = Float(currentTime / duration)
             slider.value = value
             populateLabelWithTime(CurrentTimeLabel, time: currentTime)
@@ -187,6 +187,15 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
 
     @IBAction func backLastController(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func seekSlider(notifacation:Notification)  {
+        let dic = notifacation.userInfo
+        populateLabelWithTime(self.CurrentTimeLabel, time: dic?["currentTime"]! as! Double)
+        populateLabelWithTime(self.DurationLabel, time: dic?["duration"] as! Double)
+        let value = Float(dic?["currentTime"]! as! Double)/Float(dic?["duration"] as! Double)
+        slider.value = value
+        
     }
 
 }

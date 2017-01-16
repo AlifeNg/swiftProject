@@ -34,6 +34,7 @@ class HomeTableFirstCell: UITableViewCell {
         
         let contentView_W = w - leftMargin*2
         
+        
         contentView_Back = UIView.init(frame: CGRect(x:leftMargin,y:10 as CGFloat,width:contentView_W,height:170 as CGFloat))
         self.contentView.addSubview(contentView_Back)
         
