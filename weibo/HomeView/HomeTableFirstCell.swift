@@ -25,7 +25,7 @@ class HomeTableFirstCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        let w = UIScreen.main.applicationFrame.size.width as CGFloat
+        let w = UIScreen.main.bounds.size.width as CGFloat
         let btnSize =  CGSize(width:50, height:50)
         let labSize = CGSize(width:50,height:20)
         let viewSize=CGSize(width:50, height:btnSize.height+labSize.height)

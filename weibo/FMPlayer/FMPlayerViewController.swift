@@ -186,7 +186,7 @@ class FMPlayerViewController: UIViewController ,JukeboxDelegate{
     }
 
     @IBAction func backLastController(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController!.popViewController(animated: true)
     }
     
     func seekSlider(notifacation:Notification)  {

@@ -24,7 +24,7 @@ class HomeTableFouthcell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        let w = UIScreen.main.applicationFrame.size.width as CGFloat
+        let w = UIScreen.main.bounds.size.width as CGFloat
         
         let bgView = UIView.init(frame: CGRect(x:0,y:0,width:w,height:150))
         bgView.tag = 1000;
