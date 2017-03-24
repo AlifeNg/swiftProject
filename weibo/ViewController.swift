@@ -15,7 +15,13 @@ var respObj = HomeModel()
 var table = UITableView()
 var categoryArray = Array<Any>()
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,HomeTableFirstCellDelegete,HomeTableSecondCellDelegate,HomeTableThirdCellDelegate,HomeTableFouthcellDelegate {
+class ViewController: UIViewController,
+    UITableViewDelegate,
+    UITableViewDataSource,
+    HomeTableFirstCellDelegete,
+    HomeTableSecondCellDelegate,
+    HomeTableThirdCellDelegate,
+    HomeTableFouthcellDelegate {
     //MARK:轮播图
     var bannerView : LTCycleView = {
         let cellConfig = LTCellConfig()
